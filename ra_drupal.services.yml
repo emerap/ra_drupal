@@ -1,0 +1,10 @@
+services:
+  plugin.manager.ra.definition:
+    class: Drupal\ra_drupal\RaDefinitionManager
+    parent: default_plugin_manager
+  plugin.manager.ra.format:
+    class: Drupal\ra_drupal\RaFormatManager
+    parent: default_plugin_manager
+  plugin.manager.ra.data_type:
+    class: Drupal\ra_drupal\RaDatatypeManager
+    parent: default_plugin_manager

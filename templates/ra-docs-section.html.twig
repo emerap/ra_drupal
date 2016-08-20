@@ -1,0 +1,27 @@
+<div class="ra-docs-section">
+
+    {% if label %}
+    <h2 class="ra-docs-section__title">
+        {{ label }}
+    </h2>
+    {% endif %}
+
+    {% for item in items %}
+    <div class="ra-docs-section__wrapper">
+
+        <div style="width:30%; float:left;" class="ra-docs-section__item-title">
+            {% if item.url %}
+                <a class="ra-docs-section__item-link" href="{{ item.url }}">{{ item.title }}</a>
+            {% else %}
+                {{ item.title }}
+            {% endif %}
+        </div>
+
+        <div style="width:100%;" class="ra-docs-section__item-description">
+            {{ item.description }}
+        </div>
+
+    </div>
+    {% endfor %}
+
+</div>

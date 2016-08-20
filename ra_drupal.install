@@ -1,0 +1,99 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the ra module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function ra_drupal_schema() {
+  $schema['ra_client'] = [
+    'description' => 'rapid api client',
+    'fields' => [
+      'client_id' => [
+        'description' => 'client id',
+        'type' => 'varchar',
+        'length' => 12,
+        'not null' => TRUE,
+      ],
+      'log_id' => [
+        'description' => 'client id',
+        'type' => 'varchar',
+        'length' => 8,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'user_id' => [
+        'description' => 'user id',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0
+      ],
+      'token' => [
+        'description' => 'access token',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => FALSE,
+        'default' => '',
+      ],
+      'status' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0
+      ],
+      'tag' => [
+        'description' => 'client tag',
+        'type' => 'varchar',
+        'length' => '32',
+        'not null' => TRUE,
+      ],
+      'platform' => [
+        'description' => 'client platform (for example android)',
+        'type' => 'varchar',
+        'length' => '32',
+        'not null' => TRUE,
+      ],
+      'expire' => [
+        'description' => 'expire time',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0
+      ],
+    ],
+    'primary key' => ['client_id'],
+  ];
+
+  $schema['ra_invite'] = [
+    'description' => 'rapid api invite data',
+    'fields' => [
+      'client_id' => [
+        'description' => 'client id',
+        'type' => 'varchar',
+        'length' => 12,
+        'not null' => TRUE,
+      ],
+      'invite_id' => [
+        'description' => 'invite id',
+        'type' => 'varchar',
+        'length' => 4,
+        'not null' => TRUE,
+      ],
+      'pin' => [
+        'description' => 'pin for pair 4 digits',
+        'type' => 'int',
+        'not null' => TRUE,
+      ],
+      'expire' => [
+        'description' => 'expire time',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0
+      ],
+    ],
+    'primary key' => ['invite_id'],
+  ];
+
+  return $schema;
+}

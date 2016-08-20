@@ -1,0 +1,27 @@
+<?php
+
+namespace Drupal\{{ module }}\Plugin\RaFormat;
+
+use Drupal\ra_drupal\RaFormatBase;
+
+/**
+ * @RaFormat(
+ *   id = "{{ id }}",
+ *   label = @Translation("{{ label }}"),
+ *   description = @Translation("{{ description }}"),
+ *   mime_type = "{{ mime_type }}"
+ * )
+ */
+class {{ class }} extends RaFormatBase {
+
+  /**
+   * Convert object to format.
+   *
+   * @param mixed $object
+   * @return mixed
+   */
+  public function convert($object) {
+    // TODO: Implement convert() method.
+  }
+
+}

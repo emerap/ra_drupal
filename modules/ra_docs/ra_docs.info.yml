@@ -1,0 +1,8 @@
+name: Rapid API documentation
+type: module
+description: Documentation interect view
+core: 8.x
+version: 1.0-rc
+package: Rapid API
+dependencies:
+  - ra_drupal

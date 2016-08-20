@@ -1,0 +1,45 @@
+command:
+    generate:
+        plugin:
+            ra:
+                definition:
+                    help: 'Generate Rapid API method definition'
+                    id:
+                        description: 'Enter method definition id (example example.test.subname)'
+                        help: 'Definition id'
+                    module:
+                        help: 'Module name'
+                    description:
+                        description: 'Enter method definition description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         '
+                        help: 'Definition description'
+
+                format:
+                    help: 'Generate Rapid API format'
+                    id:
+                        description: 'Enter format id (example string)'
+                        help: 'Format id'
+                    module:
+                        help: 'Module name'
+                    description:
+                        description: 'Enter format description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         '
+                        help: 'Format description'
+                    label:
+                        description: 'Enter format label (example String)'
+                        help: 'Format label'
+                    mime_type:
+                        description: 'Enter format mime-type'
+                        help: 'Format mime-type'
+
+                datatype:
+                    help: 'Generate Rapid API data type'
+                    id:
+                        description: 'Enter data type id (example string)'
+                        help: 'Data type id'
+                    module:
+                        help: 'Module name'
+                    description:
+                        description: 'Enter data type description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         '
+                        help: 'Data type description'
+                    label:
+                        description: 'Enter data type label (example String)'
+                        help: 'Data type label'

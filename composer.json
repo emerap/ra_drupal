@@ -1,0 +1,25 @@
+{
+  "name": "emerap/drupal_ra",
+  "type": "library",
+  "description": "Rapid API for Drupal 8",
+  "keywords": ["api"],
+  "homepage": "http://emerap.com",
+  "license": "GPL-3.0+",
+  "authors": [
+    {
+      "name": "Alexander Pokhodyun",
+      "email": "karbukul@yourtask.ru",
+      "homepage": "http://vk.com/karbunkul",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.0",
+    "emerap/ra": "dev-master"
+  },
+  "scripts": {
+    "post-update-cmd": [
+      "php -r \"copy('./DrupalRaConfig.php', './vendor/emerap/ra/src/RaConfig.php');\""
+    ]
+  }
+}

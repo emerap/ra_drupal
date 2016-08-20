@@ -1,0 +1,15 @@
+ra_docs.main:
+  path: 'ra/dev'
+  defaults:
+    _controller: '\Drupal\ra_docs\Controller\RaDocsController::docs_main'
+    _title: 'Rapid API documentation'
+  requirements:
+    _permission: 'ra docs access'
+
+ra_docs.method:
+  path: 'ra/dev/method/{method}'
+  defaults:
+    _controller: '\Drupal\ra_docs\Controller\RaDocsController::docs_method'
+    _title_callback: '\Drupal\ra_docs\Controller\RaDocsController::docsMethodTitle'
+  requirements:
+    _permission: 'ra docs access'

@@ -1,0 +1,27 @@
+<?php
+
+namespace Drupal\{{ module }}\Plugin\RaDataType;
+
+use Drupal\ra_drupal\RaDatatypeBase;
+
+/**
+ * @RaDataType(
+ *   id = "{{ id }}",
+ *   label = @Translation("{{ label }}"),
+ *   description = @Translation("{{ description }}")
+ * )
+ */
+class {{ class }} extends RaDatatypeBase {
+
+ /**
+   * Check value.
+   *
+   * @param string|int|float|bool $value
+   * @param \Emerap\Ra\Core\Definition $definition
+   * @return \Emerap\Ra\Core\Error|bool
+   */
+ public function check(&$value, $definition) {
+    // TODO: Implement check() method.
+ }
+
+}

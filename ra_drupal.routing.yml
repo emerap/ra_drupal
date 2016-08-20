@@ -1,0 +1,15 @@
+ra.ra_pair:
+  path: 'ra/pair'
+  defaults:
+    _form: '\Drupal\ra_drupal\Form\RaPairForm'
+    _title: 'Pair'
+  requirements:
+    _permission: 'access content'
+
+ra.ra_controller_method:
+  path: 'ra/method/{method}'
+  defaults:
+    _controller: '\Drupal\ra_drupal\Controller\RaController::method'
+    _title: 'Call'
+  requirements:
+    _permission: 'access content'

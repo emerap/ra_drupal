@@ -1,0 +1,6 @@
+name: Rapid API
+type: module
+description: Rapid API
+core: 8.x
+version: 1.0
+package: Rapid API

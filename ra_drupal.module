@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * Contains ra.module
+ */
+
+/**
+ * Autoload vendor classes
+ */
+require_once __DIR__ . '/vendor/autoload.php';
+
+/**
+ * Implements hook_theme().
+ */
+function ra_drupal_theme($existing, $type, $theme, $path) {
+  return [
+    'ra_docs_section' => [
+      'render element' => 'elements',
+      'variables' => [
+        'label' => NULL,
+        'items' => NULL,
+      ],
+      'template' => 'ra-docs-section',
+    ],
+  ];
+}
